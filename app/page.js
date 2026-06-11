@@ -64,13 +64,14 @@ export default function Home() {
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-baseline gap-2 text-xl font-bold text-brand-dark">
             <span>攏災影</span>
-            <span className="text-sm font-normal text-gray-400">LongZaiYing</span>
+            <span className="text-sm font-normal text-gray-400">KNOWZAI</span>
           </div>
           <div className="hidden items-center gap-8 text-sm font-medium text-gray-600 md:flex">
             <a href="#motivation" className="transition hover:text-brand">動機</a>
             <a href="#vision" className="transition hover:text-brand">願景</a>
             <a href="#features" className="transition hover:text-brand">App 功能</a>
             <a href="#how" className="transition hover:text-brand">運作方式</a>
+            <a href="#team" className="transition hover:text-brand">團隊</a>
             <a
               href="#contact"
               className="rounded-full bg-brand px-5 py-2 font-semibold text-white transition hover:bg-brand-dark"
@@ -237,6 +238,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 團隊介紹 */}
+      <section id="team" className="mx-auto max-w-5xl px-6 py-20">
+        <p className="text-center text-sm font-semibold tracking-widest text-brand">TEAM</p>
+        <h2 className="mt-2 text-center text-3xl font-bold text-gray-900">關於團隊</h2>
+        <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-gray-600">
+          「攏災影 KNOWZAI」是由國立中正大學學生團隊打造的防災避難專案。
+          我們致力於透過資訊科技填補災害發生時的「資訊斷層」，
+          讓每個人在極端環境下都能臨危不亂、即時獲得協助。
+        </p>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+            <div className="text-3xl">🎓</div>
+            <h3 className="mt-3 font-bold text-gray-900">學校</h3>
+            <p className="mt-1 text-sm text-gray-600">國立中正大學</p>
+          </div>
+          <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+            <div className="text-3xl">👨‍🏫</div>
+            <h3 className="mt-3 font-bold text-gray-900">指導老師</h3>
+            <p className="mt-1 text-sm text-gray-600">熊博安 教授</p>
+          </div>
+          <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+            <div className="text-3xl">🏅</div>
+            <h3 className="mt-3 font-bold text-gray-900">競賽榮譽</h3>
+            <p className="mt-1 text-sm text-gray-600">iGEM 2025 國際金牌（CCU-Taiwan）</p>
+          </div>
+        </div>
+
+        <blockquote className="mx-auto mt-12 max-w-3xl rounded-2xl bg-orange-50 p-8 text-center">
+          <p className="text-xl font-bold text-brand-dark">
+            「讓每個人都能活著，直到生活回到正軌。」
+          </p>
+          <p className="mt-3 text-sm text-gray-500">— 攏災影 KNOWZAI 核心理念</p>
+        </blockquote>
+
+        <p className="mx-auto mt-8 max-w-3xl text-center leading-relaxed text-gray-600">
+          團隊核心成員曾代表 CCU-Taiwan 參與國際合成生物學競賽 iGEM 並榮獲金牌，
+          我們將嚴謹的研究方法與「以人為本」的實踐精神帶入防災領域，
+          確保每一項技術都真正站在使用者角度、解決救命的問題。
+        </p>
+      </section>
+
       {/* CTA / 聯絡 */}
       <section id="contact" className="bg-brand-dark py-20 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center">
@@ -268,7 +311,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-500 sm:flex-row">
           <div className="flex items-baseline gap-2 font-bold text-brand-dark">
             <span>攏災影</span>
-            <span className="text-xs font-normal text-gray-400">LongZaiYing</span>
+            <span className="text-xs font-normal text-gray-400">KNOWZAI</span>
           </div>
           <div className="flex gap-6">
             <a href="#features" className="hover:text-brand">App 功能</a>
@@ -282,7 +325,7 @@ export default function Home() {
               GitHub
             </a>
           </div>
-          <div className="text-gray-400">© {new Date().getFullYear()} 攏災影 LongZaiYing</div>
+          <div className="text-gray-400">© {new Date().getFullYear()} 攏災影 KNOWZAI</div>
         </div>
       </footer>
     </main>
