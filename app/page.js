@@ -56,6 +56,44 @@ const highlights = [
   { value: "AI", label: "防災問答助理" },
 ];
 
+const members = [
+  {
+    name: "張書涵",
+    dept: "資訊管理學系四年級",
+    role: "專案負責人 / 商業策略與營運規劃",
+    desc:
+      "具備大型活動統籌、政府計畫執行與跨域協作經驗，曾主導教育部青年發展署專案，負責從提案發想、預算編列到結案管理。擅長整合資源與制定策略，負責團隊整體方向、時程控管與市場推進。",
+  },
+  {
+    name: "江宗諺",
+    dept: "資訊管理學系四年級",
+    role: "核心技術開發（AI 系統與開放資料整合）",
+    desc:
+      "具備網頁開發與軟體開發經驗，負責 AI 問答助理「阿巧」與系統核心邏輯開發，將技術落實於實際應用場景。",
+  },
+  {
+    name: "林威岑",
+    dept: "資訊工程學系三年級",
+    role: "核心技術開發（系統架構與地圖功能開發）",
+    desc:
+      "具備系統設計與前端開發能力，曾帶領團隊開發 AI 評估系統。負責災害地圖與系統整合開發。",
+  },
+  {
+    name: "林新恩",
+    dept: "資訊管理學系四年級",
+    role: "團隊主要接洽人、UI/UX 設計與品牌形象",
+    desc:
+      "專長於視覺設計與使用者介面規劃，負責 App 整體介面設計與品牌形象建構，確保產品在緊急情境下仍具備良好操作體驗。",
+  },
+  {
+    name: "柯達宏",
+    dept: "機械工程學系二年級",
+    role: "產品策略與使用者體驗優化",
+    desc:
+      "擅長問題分析與系統性思考，曾於 iGEM 國際競賽榮獲金牌。負責產品概念發想、策略規劃與使用者體驗優化。",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -242,28 +280,37 @@ export default function Home() {
       <section id="team" className="mx-auto max-w-5xl px-6 py-20">
         <p className="text-center text-sm font-semibold tracking-widest text-brand">TEAM</p>
         <h2 className="mt-2 text-center text-3xl font-bold text-gray-900">關於團隊</h2>
-        <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-relaxed text-gray-600">
-          「攏災影 KNOWZAI」是由國立中正大學學生團隊打造的防災避難專案。
-          我們致力於透過資訊科技填補災害發生時的「資訊斷層」，
-          讓每個人在極端環境下都能臨危不亂、即時獲得協助。
-        </p>
+        <div className="mx-auto mt-8 max-w-3xl space-y-4 text-center text-lg leading-relaxed text-gray-600">
+          <p>
+            本團隊由國立中正大學跨領域學生組成，成員涵蓋資訊管理、資訊工程、機械工程，
+            具備技術開發、產品設計、商業規劃與專案執行之完整能力鏈。
+          </p>
+          <p>
+            團隊以「解決真實社會問題」為核心導向，結合 AI 技術、系統開發與使用者體驗設計，
+            致力於打造具備實際落地能力之防災解決方案《攏災影》。在過去的專題實作、競賽參與與
+            政府計畫經驗中，已累積跨域協作與專案執行能力，能有效將構想轉化為可行產品。
+          </p>
+        </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
-            <div className="text-3xl">🎓</div>
-            <h3 className="mt-3 font-bold text-gray-900">學校</h3>
-            <p className="mt-1 text-sm text-gray-600">國立中正大學</p>
-          </div>
-          <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
-            <div className="text-3xl">👨‍🏫</div>
-            <h3 className="mt-3 font-bold text-gray-900">指導老師</h3>
-            <p className="mt-1 text-sm text-gray-600">熊博安 教授</p>
-          </div>
-          <div className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm">
-            <div className="text-3xl">🏅</div>
-            <h3 className="mt-3 font-bold text-gray-900">競賽榮譽</h3>
-            <p className="mt-1 text-sm text-gray-600">iGEM 2025 國際金牌（CCU-Taiwan）</p>
-          </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {members.map((m) => (
+            <div
+              key={m.name}
+              className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md"
+            >
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 text-lg font-bold text-brand-dark">
+                  {m.name[0]}
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">{m.name}</h3>
+                  <p className="text-xs text-gray-500">{m.dept}</p>
+                </div>
+              </div>
+              <p className="mt-4 text-sm font-semibold text-brand-dark">{m.role}</p>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600">{m.desc}</p>
+            </div>
+          ))}
         </div>
 
         <blockquote className="mx-auto mt-12 max-w-3xl rounded-2xl bg-orange-50 p-8 text-center">
@@ -272,12 +319,6 @@ export default function Home() {
           </p>
           <p className="mt-3 text-sm text-gray-500">— 攏災影 KNOWZAI 核心理念</p>
         </blockquote>
-
-        <p className="mx-auto mt-8 max-w-3xl text-center leading-relaxed text-gray-600">
-          團隊核心成員曾代表 CCU-Taiwan 參與國際合成生物學競賽 iGEM 並榮獲金牌，
-          我們將嚴謹的研究方法與「以人為本」的實踐精神帶入防災領域，
-          確保每一項技術都真正站在使用者角度、解決救命的問題。
-        </p>
       </section>
 
       {/* CTA / 聯絡 */}
