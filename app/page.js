@@ -324,7 +324,7 @@ export default function Home() {
           <a href="#top" className="flex items-center">
             <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-14 w-auto" />
           </a>
-          <div className="hidden items-center gap-7 text-sm font-medium text-gray-600 md:flex">
+          <div className="hidden items-center gap-6 text-sm font-medium text-gray-600 lg:flex">
             <a href="#news" className="transition hover:text-brand">最新消息</a>
             <a href="#problem" className="transition hover:text-brand">社會問題</a>
             <a href="#features" className="transition hover:text-brand">App 功能</a>
