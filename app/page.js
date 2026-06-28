@@ -290,6 +290,31 @@ const members = [
   },
 ];
 
+const news = [
+  {
+    date: "2026.04.24",
+    tag: "🎉 團隊喜訊",
+    highlight: { value: "16 萬", label: "教育部補助" },
+    title: "攏災影榮獲教育部創業實戰模擬學習平台 16 萬元補助",
+    desc:
+      "本學期，攏災影團隊以防災社會創新提案通過教育部「創業實戰模擬學習平台」審核，榮獲新臺幣 16 萬元補助。國立中正大學青創團隊此次以「AI 雙星」之姿，於教育部 U-start 與創業實戰計畫合計獲得 86 萬元肯定。這筆補助將投入 App 優化與校園防災推廣，讓更多人能用上即時的防災工具。",
+    links: [
+      {
+        label: "教育部實戰模擬平台公告",
+        href: "https://ssp.moe.gov.tw/newses/67",
+      },
+      {
+        label: "中正大學新聞稿",
+        href: "https://www.ccu.edu.tw/p/406-1000-88740,r981.php?Lang=zh-tw",
+      },
+      {
+        label: "中正大學 Facebook",
+        href: "https://www.facebook.com/share/p/18cV8zNFKj/?mibextid=wwXIfr",
+      },
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -300,6 +325,7 @@ export default function Home() {
             <img src="/logo.png" alt="攏災影 KnowZai" className="h-9 w-auto" />
           </a>
           <div className="hidden items-center gap-7 text-sm font-medium text-gray-600 md:flex">
+            <a href="#news" className="transition hover:text-brand">最新消息</a>
             <a href="#problem" className="transition hover:text-brand">社會問題</a>
             <a href="#features" className="transition hover:text-brand">App 功能</a>
             <a href="#screens" className="transition hover:text-brand">實際畫面</a>
@@ -386,6 +412,60 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 最新消息 */}
+      <section id="news" className="mx-auto max-w-6xl px-6 py-20">
+        <p className="text-center text-sm font-semibold tracking-widest text-brand">NEWS</p>
+        <h2 className="mt-2 text-center text-3xl font-bold text-gray-900">最新消息</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-gray-500">
+          團隊的最新動態、獲獎與合作消息，都會在這裡更新。
+        </p>
+
+        <div className="mt-12 space-y-6">
+          {news.map((n) => (
+            <article
+              key={n.title}
+              className="overflow-hidden rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50/70 to-white shadow-sm transition hover:shadow-md"
+            >
+              <div className="grid gap-8 p-8 md:grid-cols-[200px,1fr] md:p-10">
+                {/* 補助亮點 */}
+                {n.highlight && (
+                  <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-6 text-center shadow-sm">
+                    <div className="text-4xl font-extrabold text-brand-dark">{n.highlight.value}</div>
+                    <div className="mt-2 text-sm font-medium text-gray-500">{n.highlight.label}</div>
+                  </div>
+                )}
+
+                {/* 內容 */}
+                <div className={n.highlight ? "" : "md:col-span-2"}>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand-dark">
+                      {n.tag}
+                    </span>
+                    <time className="text-sm font-medium text-gray-400">{n.date}</time>
+                  </div>
+                  <h3 className="mt-4 text-xl font-bold text-gray-900">{n.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-600">{n.desc}</p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {n.links.map((l) => (
+                      <a
+                        key={l.href}
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-white px-4 py-2 text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-white"
+                      >
+                        {l.label}
+                        <span aria-hidden>↗</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -779,6 +859,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-500 sm:flex-row">
           <img src="/logo.png" alt="攏災影 KnowZai" className="h-7 w-auto" />
           <div className="flex gap-6">
+            <a href="#news" className="hover:text-brand">最新消息</a>
             <a href="#problem" className="hover:text-brand">社會問題</a>
             <a href="#features" className="hover:text-brand">App 功能</a>
             <a href="#impact" className="hover:text-brand">影響力</a>
