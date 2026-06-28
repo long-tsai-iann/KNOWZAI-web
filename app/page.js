@@ -322,7 +322,7 @@ export default function Home() {
       <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center">
-            <img src="/logo.png" alt="攏災影 KnowZai" className="h-9 w-auto" />
+            <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-10 w-auto" />
           </a>
           <div className="hidden items-center gap-7 text-sm font-medium text-gray-600 md:flex">
             <a href="#news" className="transition hover:text-brand">最新消息</a>
@@ -795,7 +795,7 @@ export default function Home() {
           <p className="text-xl font-bold text-brand-dark">
             「讓每個人都能活著，直到生活回到正軌。」
           </p>
-          <p className="mt-3 text-sm text-gray-500">— 攏災影 KNOWZAI 核心理念</p>
+          <p className="mt-3 text-sm text-gray-500">— 攏災影 KNOW ZAI 核心理念</p>
         </blockquote>
       </section>
 
@@ -857,7 +857,7 @@ export default function Home() {
       {/* 頁尾 */}
       <footer className="border-t border-gray-100 bg-white py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-500 sm:flex-row">
-          <img src="/logo.png" alt="攏災影 KnowZai" className="h-7 w-auto" />
+          <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-8 w-auto" />
           <div className="flex gap-6">
             <a href="#news" className="hover:text-brand">最新消息</a>
             <a href="#problem" className="hover:text-brand">社會問題</a>
@@ -873,7 +873,7 @@ export default function Home() {
               GitHub
             </a>
           </div>
-          <div className="text-gray-400">© {new Date().getFullYear()} 攏災影 KNOWZAI</div>
+          <div className="text-gray-400">© {new Date().getFullYear()} 攏災影 KNOW ZAI</div>
         </div>
       </footer>
     </main>

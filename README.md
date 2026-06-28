@@ -1,6 +1,6 @@
-# 攏災影 KNOWZAI 官方網站
+# 攏災影 KNOW ZAI 官方網站
 
-攏災影 KNOWZAI（防災避難 App）的官方介紹網站，使用 **Next.js (App Router) + Tailwind CSS** 建置。
+攏災影 KNOW ZAI（防災避難 App）的官方介紹網站，使用 **Next.js (App Router) + Tailwind CSS** 建置。
 內容包含：團隊動機、願景、App 功能介紹、運作方式與團隊介紹。
 
 ## 本機開發

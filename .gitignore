@@ -25,3 +25,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# 品牌素材：保留原始 logo 圖檔，但不提交大型 PDF 指南（仍保存在本機）
+brand-assets/*.pdf
