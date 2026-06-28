@@ -1,3 +1,5 @@
+import Header from "./Header";
+
 const problems = [
   {
     value: "73%",
@@ -319,29 +321,7 @@ export default function Home() {
   return (
     <main>
       {/* 導覽列 */}
-      <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center">
-            <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-14 w-auto" />
-          </a>
-          <div className="hidden items-center gap-6 text-sm font-medium text-gray-600 lg:flex">
-            <a href="#news" className="transition hover:text-brand">最新消息</a>
-            <a href="#problem" className="transition hover:text-brand">社會問題</a>
-            <a href="#features" className="transition hover:text-brand">App 功能</a>
-            <a href="#screens" className="transition hover:text-brand">實際畫面</a>
-            <a href="#impact" className="transition hover:text-brand">社會影響力</a>
-            <a href="#model" className="transition hover:text-brand">永續經營</a>
-            <a href="#team" className="transition hover:text-brand">團隊</a>
-            <a href="#faq" className="transition hover:text-brand">FAQ</a>
-            <a
-              href="#contact"
-              className="rounded-full bg-brand px-5 py-2 font-semibold text-white transition hover:bg-brand-dark"
-            >
-              聯絡我們
-            </a>
-          </div>
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section id="top" className="relative overflow-hidden bg-gradient-to-b from-orange-50 via-orange-50/40 to-white">
@@ -352,7 +332,7 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
           {/* 文案 */}
           <div className="text-center lg:text-left">
-            <p className="mb-5 inline-block rounded-full bg-brand/10 px-4 py-1 text-sm font-medium text-brand-dark">
+            <p className="mb-5 inline-block rounded-full bg-brand/10 px-4 py-1 text-sm font-medium text-brand">
               🌱 社會創新 × 防災科技
             </p>
             <h1 className="text-4xl font-extrabold leading-tight text-gray-900 md:text-5xl">
@@ -373,7 +353,7 @@ export default function Home() {
               </a>
               <a
                 href="#impact"
-                className="rounded-full border border-brand px-8 py-3 font-semibold text-brand-dark transition hover:bg-brand/5"
+                className="rounded-full border border-brand px-8 py-3 font-semibold text-brand transition hover:bg-brand/5"
               >
                 我們的影響力
               </a>
@@ -390,7 +370,7 @@ export default function Home() {
                   className="w-full rounded-[2rem]"
                 />
               </div>
-              <span className="absolute -right-4 top-6 rounded-full bg-white px-3 py-1 text-xs font-semibold text-brand-dark shadow-md">
+              <span className="absolute -right-4 top-6 rounded-full bg-white px-3 py-1 text-xs font-semibold text-brand shadow-md">
                 📱 實際 App 畫面
               </span>
               <img
@@ -407,7 +387,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 rounded-2xl border border-orange-100 bg-white/70 p-6 text-center shadow-sm sm:grid-cols-4">
             {highlights.map((h) => (
               <div key={h.label}>
-                <div className="text-2xl font-extrabold text-brand-dark">{h.value}</div>
+                <div className="text-2xl font-extrabold text-brand">{h.value}</div>
                 <div className="mt-1 text-sm text-gray-500">{h.label}</div>
               </div>
             ))}
@@ -433,7 +413,7 @@ export default function Home() {
                 {/* 補助亮點 */}
                 {n.highlight && (
                   <div className="flex flex-col items-center justify-center rounded-2xl bg-white p-6 text-center shadow-sm">
-                    <div className="text-4xl font-extrabold text-brand-dark">{n.highlight.value}</div>
+                    <div className="text-4xl font-extrabold text-brand">{n.highlight.value}</div>
                     <div className="mt-2 text-sm font-medium text-gray-500">{n.highlight.label}</div>
                   </div>
                 )}
@@ -441,7 +421,7 @@ export default function Home() {
                 {/* 內容 */}
                 <div className={n.highlight ? "" : "md:col-span-2"}>
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand-dark">
+                    <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">
                       {n.tag}
                     </span>
                     <time className="text-sm font-medium text-gray-400">{n.date}</time>
@@ -455,7 +435,7 @@ export default function Home() {
                         href={l.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-white px-4 py-2 text-sm font-semibold text-brand-dark transition hover:bg-brand hover:text-white"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-white px-4 py-2 text-sm font-semibold text-brand transition hover:bg-brand hover:text-white"
                       >
                         {l.label}
                         <span aria-hidden>↗</span>
@@ -483,7 +463,7 @@ export default function Home() {
               key={p.label}
               className="rounded-2xl border border-orange-100 bg-orange-50/60 p-8 text-center"
             >
-              <div className="text-4xl font-extrabold text-brand-dark">{p.value}</div>
+              <div className="text-4xl font-extrabold text-brand">{p.value}</div>
               <p className="mt-3 font-medium text-gray-700">{p.label}</p>
               <p className="mt-2 text-xs text-gray-400">資料來源：{p.source}</p>
             </div>
@@ -678,7 +658,7 @@ export default function Home() {
               <div key={m.title} className="flex flex-col rounded-2xl bg-white p-8 shadow-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-3xl">{m.icon}</span>
-                  <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand-dark">
+                  <span className="rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">
                     {m.tag}
                   </span>
                 </div>
@@ -701,7 +681,7 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 <div
                   className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                    r.done ? "bg-brand text-white" : "border-2 border-brand/40 bg-white text-brand-dark"
+                    r.done ? "bg-brand text-white" : "border-2 border-brand/40 bg-white text-brand"
                   }`}
                 >
                   {r.done ? "✓" : idx + 1}
@@ -717,7 +697,7 @@ export default function Home() {
                       r.done
                         ? "bg-green-50 text-green-700"
                         : r.status === "進行中"
-                        ? "bg-brand/10 text-brand-dark"
+                        ? "bg-brand/10 text-brand"
                         : "bg-gray-100 text-gray-500"
                     }`}
                   >
@@ -777,7 +757,7 @@ export default function Home() {
               className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 text-lg font-bold text-brand-dark">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 text-lg font-bold text-brand">
                   {m.name[0]}
                 </div>
                 <div>
@@ -785,14 +765,14 @@ export default function Home() {
                   <p className="text-xs text-gray-500">{m.dept}</p>
                 </div>
               </div>
-              <p className="mt-4 text-sm font-semibold text-brand-dark">{m.role}</p>
+              <p className="mt-4 text-sm font-semibold text-brand">{m.role}</p>
               <p className="mt-2 text-sm leading-relaxed text-gray-600">{m.desc}</p>
             </div>
           ))}
         </div>
 
         <blockquote className="mx-auto mt-12 max-w-3xl rounded-2xl bg-orange-50 p-8 text-center">
-          <p className="text-xl font-bold text-brand-dark">
+          <p className="text-xl font-bold text-brand">
             「讓每個人都能活著，直到生活回到正軌。」
           </p>
           <p className="mt-3 text-sm text-gray-500">— 攏災影 KNOW ZAI 核心理念</p>
@@ -822,17 +802,17 @@ export default function Home() {
       </section>
 
       {/* CTA / 聯絡 */}
-      <section id="contact" className="bg-brand-dark py-20 text-white">
+      <section id="contact" className="bg-brand py-20 text-white">
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl font-bold">想了解更多或一起參與？</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-orange-100">
+          <p className="mx-auto mt-4 max-w-2xl text-white/90">
             無論你是想搶先體驗的使用者、想推動防災的政府與學校，
             或是尋找 ESG 合作的企業——歡迎與我們聯繫，一起讓台灣更有韌性。
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="mailto:longtsaiiann@gmail.com"
-              className="rounded-full bg-white px-8 py-3 font-semibold text-brand-dark transition hover:bg-orange-50"
+              className="rounded-full bg-white px-8 py-3 font-semibold text-brand transition hover:bg-orange-50"
             >
               ✉️ Email 聯絡
             </a>
