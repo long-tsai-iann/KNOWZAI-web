@@ -322,7 +322,7 @@ export default function Home() {
       <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center">
-            <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-10 w-auto" />
+            <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-14 w-auto" />
           </a>
           <div className="hidden items-center gap-7 text-sm font-medium text-gray-600 md:flex">
             <a href="#news" className="transition hover:text-brand">最新消息</a>
@@ -857,7 +857,7 @@ export default function Home() {
       {/* 頁尾 */}
       <footer className="border-t border-gray-100 bg-white py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-gray-500 sm:flex-row">
-          <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-8 w-auto" />
+          <img src="/logo.png" alt="攏災影 KNOW ZAI" className="h-11 w-auto" />
           <div className="flex gap-6">
             <a href="#news" className="hover:text-brand">最新消息</a>
             <a href="#problem" className="hover:text-brand">社會問題</a>
