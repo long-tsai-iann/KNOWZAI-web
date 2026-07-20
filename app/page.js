@@ -226,7 +226,7 @@ const roadmap = [
 
 const partners = [
   { icon: "🌦️", name: "中央氣象署", desc: "開放氣象與地震資料" },
-  { icon: "🗺️", name: "OpenStreetMap", desc: "開源地圖圖資" },
+  { icon: "🗺️", name: "Google Maps API", desc: "地圖圖資與定位服務" },
   { icon: "⚡", name: "Groq AI", desc: "AI 助理推論引擎" },
   { icon: "🏫", name: "國立中正大學", desc: "團隊孵育與學研支持" },
 ];
