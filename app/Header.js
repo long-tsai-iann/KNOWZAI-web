@@ -6,6 +6,7 @@ const links = [
   { href: "#news", label: "最新消息" },
   { href: "#problem", label: "社會問題" },
   { href: "#features", label: "App 功能" },
+  { href: "#trust", label: "信任與隱私" },
   { href: "#screens", label: "實際畫面" },
   { href: "#impact", label: "社會影響力" },
   { href: "#model", label: "永續經營" },

@@ -50,7 +50,7 @@ const features = [
   {
     icon: "🤖",
     title: "AI 防災助理「阿巧」",
-    desc: "以自然語言詢問天氣與防災建議，阿巧依即時資料給你最適合的提醒。",
+    desc: "用自然語言問防災問題，阿巧會帶入你所在縣市的官方警示、附近的民眾回報與最近的避難所來回答；緊急情境一定先提醒撥打 119。",
   },
   {
     icon: "🚨",
@@ -64,8 +64,47 @@ const features = [
   },
   {
     icon: "📍",
-    title: "避難設施查詢",
-    desc: "依災害類型搜尋鄰近避難所、醫療與消防設施，規劃最近的避難路線。",
+    title: "避難設施與逃難路線",
+    desc: "全台 5,900+ 筆避難收容處所與醫療、消防設施；規劃路線時自動避開已回報的淹水與道路中斷，並提供逐步語音指引。",
+  },
+  {
+    icon: "📴",
+    title: "離線也能用",
+    desc: "地圖圖磚、警示、避難所與規劃好的路線都有離線快取；斷網時拍的災情回報會排隊，恢復連線自動送出。",
+  },
+  {
+    icon: "📦",
+    title: "物資分配站",
+    desc: "重大災害時開放任何人公告「何時、何地、發什麼物資」，讓資源與需要的人對上；平時關閉以免誤用。",
+  },
+  {
+    icon: "♿",
+    title: "長輩與多語友善",
+    desc: "字級三段調整、給長輩的簡易模式、中英雙語、深色主題——災害時每個人都要看得懂、按得到。",
+  },
+];
+
+// 信任與隱私：我們對使用者資料與 AI 的承諾（對應 ISO/IEC 42001 AI 管理系統文件）
+const trust = [
+  {
+    icon: "🛡️",
+    title: "AI 有規矩，也有開關",
+    desc: "阿巧只回答防災問題、每則回覆都標示 AI 生成、第一次使用前會說明資料去向；團隊可在數秒內關閉服務。制度依 ISO/IEC 42001 建立，有文件、紀錄與每月人工覆核。",
+  },
+  {
+    icon: "📍",
+    title: "你的位置不離開我們的伺服器",
+    desc: "座標只用來查你所在縣市的警示與附近資源，反查縣市在自家後端完成、不送第三方；送給 AI 的只有鄉鎮層級的地名。",
+  },
+  {
+    icon: "📷",
+    title: "照片先去掉拍攝資訊",
+    desc: "災情照片上傳前會移除 GPS、機型等中繼資料；災情回報保存 1 年、家人位置 30 天、AI 對話 30 天後自動刪除。",
+  },
+  {
+    icon: "🔑",
+    title: "帳號由你掌控",
+    desc: "驗證信箱、修改與重設密碼、隨時刪除帳號並清除個資；可申請資料副本，15 天內回覆。",
   },
 ];
 
@@ -206,7 +245,7 @@ const roadmap = [
     status: "進行中",
     done: false,
     title: "驗證與優化",
-    desc: "進行使用者測試與校園示範推廣，蒐集真實回饋、優化操作體驗，驗證社會需求與影響力假設。",
+    desc: "2026 年 9 月已於 Google Play 上架進行內部測試；同步進行使用者測試與校園示範推廣，蒐集真實回饋、優化操作體驗，驗證社會需求與影響力假設。",
   },
   {
     stage: "第三階段",
@@ -226,8 +265,9 @@ const roadmap = [
 
 const partners = [
   { icon: "🌦️", name: "中央氣象署", desc: "開放氣象與地震資料" },
-  { icon: "🗺️", name: "Google Maps API", desc: "地圖圖資與定位服務" },
-  { icon: "⚡", name: "Groq AI", desc: "AI 助理推論引擎" },
+  { icon: "🏚️", name: "內政部消防署", desc: "全台避難收容處所開放資料" },
+  { icon: "🗺️", name: "Google Maps API", desc: "地圖圖資、路線與設施搜尋" },
+  { icon: "⚡", name: "Groq AI", desc: "AI 助理推論（Qwen 模型）" },
   { icon: "🏫", name: "國立中正大學", desc: "團隊孵育與學研支持" },
 ];
 
@@ -519,7 +559,7 @@ export default function Home() {
       <section id="features" className="mx-auto max-w-6xl px-6 py-20">
         <p className="text-center text-sm font-semibold tracking-widest text-brand">FEATURES</p>
         <h2 className="mt-2 text-center text-3xl font-bold text-gray-900">App 功能介紹</h2>
-        <p className="mt-4 text-center text-gray-500">MVP 已完成開發，以下為核心功能</p>
+        <p className="mt-4 text-center text-gray-500">已於 Google Play 內部測試中，以下為目前的核心功能</p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
             <div
@@ -533,6 +573,31 @@ export default function Home() {
               <p className="mt-2 text-sm leading-relaxed text-gray-600">{f.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 信任與隱私 */}
+      <section id="trust" className="bg-orange-50/40 py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="text-center text-sm font-semibold tracking-widest text-brand">TRUST &amp; PRIVACY</p>
+          <h2 className="mt-2 text-center text-3xl font-bold text-gray-900">負責任的 AI 與你的資料</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-gray-500">
+            防災 App 拿到的是最敏感的資料——你在哪裡、你的家人在哪裡。我們把規矩寫成制度，不只寫在網頁上。
+          </p>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            {trust.map((t) => (
+              <div key={t.title} className="flex gap-4 rounded-2xl border border-orange-100 bg-white p-6 shadow-sm">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-2xl">{t.icon}</div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900">{t.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-600">{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-center text-xs text-gray-400">
+            隱私政策全文在 App 內「關於」頁；AI 管理制度文件（ISO/IEC 42001）與稽核規範可應合作單位需求提供。
+          </p>
         </div>
       </section>
 
