@@ -45,3 +45,8 @@ npm run start
 
 - 接攏災影後端 API（Render）顯示即時災情 / 天氣（後端已開啟 CORS）。
 - 加入真實 App 截圖、成員照片、下載連結。
+
+## 跟其他 repo 的關係
+
+本站不打後端 API。`brand-assets/` 是 logo 與色票的真相來源，App 與管理後台的 logo 是複本——
+換 logo 時三邊一起換，見主 repo `long_tsai_iann/docs/cross-repo-conventions.md`。
