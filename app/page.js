@@ -135,34 +135,44 @@ const highlights = [
 
 const screens = [
   {
-    src: "/screenshots/home.png",
+    src: "/screenshots/home.webp",
     title: "首頁",
-    desc: "即時天氣、所在地警示與災情地圖一目了然",
+    desc: "所在縣市即時天氣、未來預報與 AI 氣象摘要，右下角是阿巧",
   },
   {
-    src: "/screenshots/map.png",
-    title: "避難設施地圖",
-    desc: "依類型與半徑搜尋醫療、救援與避難地點",
+    src: "/screenshots/shelters.webp",
+    title: "附近避難所",
+    desc: "全台 5,900+ 筆官方避難收容處所，依距離排序、一鍵導航",
   },
   {
-    src: "/screenshots/camera.png",
-    title: "拍照上傳",
-    desc: "災情現場拍照回報，標記即時上地圖",
+    src: "/screenshots/route.webp",
+    title: "逃難路線",
+    desc: "自動避開已回報的災情，顯示步行距離與時間",
   },
   {
-    src: "/screenshots/info.png",
-    title: "災害資訊",
-    desc: "豪雨、溫度等官方特報整合查詢",
+    src: "/screenshots/navigation.webp",
+    title: "逐步導航",
+    desc: "大字轉向指引、語音播報、預估抵達時間；斷網也能繼續",
   },
   {
-    src: "/screenshots/profile.png",
-    title: "個人與群組",
-    desc: "帳號設定、關注地點與家人群組管理",
+    src: "/screenshots/family.webp",
+    title: "家人定位",
+    desc: "互相同意後才看得到彼此，紫色圖釘就是家人的最新位置",
   },
   {
-    src: "/screenshots/auth.png",
-    title: "登入與註冊",
-    desc: "Email 或社群帳號快速登入",
+    src: "/screenshots/chat.webp",
+    title: "AI 助理阿巧",
+    desc: "帶入附近避難所與官方警示回答；每則都標示 AI 生成",
+  },
+  {
+    src: "/screenshots/alerts.webp",
+    title: "民生示警",
+    desc: "依縣市／鄉鎮篩選的官方特報，嚴重程度一目了然",
+  },
+  {
+    src: "/screenshots/dark-map.webp",
+    title: "深色主題",
+    desc: "夜間或停電時省眼力，地標資訊一個都不少",
   },
 ];
 
@@ -305,9 +315,9 @@ const members = [
   {
     name: "江宗諺",
     dept: "資訊管理學系四年級",
-    role: "核心技術開發（AI 系統與開放資料整合）",
+    role: "核心技術開發（AI 系統與開放資料整合）／AIMS 技術負責人與人工覆核者",
     desc:
-      "具備網頁開發與軟體開發經驗，負責 AI 問答助理「阿巧」與系統核心邏輯開發，將技術落實於實際應用場景。",
+      "具備網頁開發與軟體開發經驗，負責 AI 問答助理「阿巧」與系統核心邏輯開發。在 ISO/IEC 42001 AI 管理系統中擔任技術負責人與人工覆核者：實作風險處置措施、維護 AI 關閉開關、每月抽樣覆核 AI 對話、事件初判與演練觀察。",
   },
   {
     name: "張書涵",
@@ -319,9 +329,9 @@ const members = [
   {
     name: "林威岑",
     dept: "資訊工程學系三年級",
-    role: "核心技術開發（系統架構與地圖功能開發）",
+    role: "核心技術開發（系統架構與地圖功能開發）／AI 管理負責人（AIMS Owner）",
     desc:
-      "具備系統設計與前端開發能力，曾帶領團隊開發 AI 評估系統。負責災害地圖與系統整合開發。",
+      "具備系統設計與前端開發能力，曾帶領團隊開發 AI 評估系統，負責災害地圖與系統整合開發。ISO/IEC 27701 與 42001 主導稽核員，擔任團隊的 AI 管理負責人與資料保護聯絡人：制定 AI 治理制度與文件、核准風險處置、主持管理審查、負責隱私政策與個資法遵，並建立治理儀表板追蹤制度運作。",
   },
   {
     name: "柯達宏",
@@ -405,7 +415,7 @@ export default function Home() {
             <div className="relative">
               <div className="w-64 overflow-hidden rounded-[2.5rem] border-8 border-gray-900 bg-gray-900 shadow-2xl">
                 <img
-                  src="/screenshots/home.png"
+                  src="/screenshots/home.webp"
                   alt="攏災影 App 首頁：即時天氣與災情地圖"
                   className="w-full rounded-[2rem]"
                 />
@@ -607,9 +617,9 @@ export default function Home() {
           <p className="text-center text-sm font-semibold tracking-widest text-brand">SCREENSHOTS</p>
           <h2 className="mt-2 text-center text-3xl font-bold text-gray-900">App 實際畫面</h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-gray-500">
-            不只是概念——以下皆為目前 App 的真實操作畫面。
+            不只是概念——以下皆為目前 App 的真實操作畫面（2026 年 9 月，Google Play 內測版）。
           </p>
-          <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
             {screens.map((s) => (
               <figure key={s.title} className="text-center">
                 <div className="overflow-hidden rounded-2xl border-4 border-gray-900 bg-gray-900 shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
