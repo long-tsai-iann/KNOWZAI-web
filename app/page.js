@@ -150,6 +150,16 @@ const screens = [
     desc: "自動避開已回報的災情，顯示步行距離與時間",
   },
   {
+    src: "/screenshots/nearby-medical.webp",
+    title: "醫療與救援設施",
+    desc: "地圖上一鍵搜尋鄰近醫院、消防與救援據點，依距離排序",
+  },
+  {
+    src: "/screenshots/disaster-map.webp",
+    title: "災情地圖",
+    desc: "民眾回報的災情即時標示在地圖上，規劃路線時自動避開",
+  },
+  {
     src: "/screenshots/navigation.webp",
     title: "逐步導航",
     desc: "大字轉向指引、語音播報、預估抵達時間；斷網也能繼續",
