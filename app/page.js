@@ -616,7 +616,8 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-8 text-center text-xs text-gray-400">
-            隱私政策全文在 App 內「關於」頁；AI 管理制度文件（ISO/IEC 42001）與稽核規範可應合作單位需求提供。
+            <a href="/privacy" className="underline hover:text-brand">隱私政策全文</a>
+            （App 內「個人／群組」→「關於攏災影」是同一份）；AI 管理制度文件（ISO/IEC 42001）與稽核規範可應合作單位需求提供。
           </p>
         </div>
       </section>
@@ -928,6 +929,7 @@ export default function Home() {
             <a href="#problem" className="hover:text-brand">社會問題</a>
             <a href="#features" className="hover:text-brand">App 功能</a>
             <a href="#impact" className="hover:text-brand">影響力</a>
+            <a href="/privacy" className="hover:text-brand">隱私政策</a>
             <a href="mailto:longtsaiiann@gmail.com" className="hover:text-brand">聯絡</a>
             <a
               href="https://github.com/long-tsai-iann"
